@@ -18,13 +18,14 @@ public class BurgerConstructorTest {
     private WebDriver driver;
     BurgerConstructor constructor = new BurgerConstructor();
     WebDriverWait wait;
+    private final String BASE_URL = "https://stellarburgers.education-services.ru";
 
     @BeforeEach
     void setUp(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
-        driver.get("https://stellarburgers.education-services.ru");
+        driver.get(BASE_URL);
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }

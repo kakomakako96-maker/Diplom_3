@@ -31,7 +31,7 @@ public class AccountTest {
     void setUp() {
         name = String.valueOf(UUID.randomUUID());
         email = (UUID.randomUUID()) + "@mail.ru";
-        password = "123456789";
+        password = String.valueOf(UUID.randomUUID());
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
